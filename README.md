@@ -9,3 +9,5 @@ https://aur.archlinux.org/yay.git
 # startx starting xfce4:
 echo 'exec xfce4-session' > /home/rt/.xinitrc
 
+echo 'exec startx' > /home/rt/.bash_profile
+
