@@ -24,6 +24,7 @@ linux-firmware
 linux-headers
 lm_sensors
 lynx
+make
 mpg123
 mplayer
 nano
