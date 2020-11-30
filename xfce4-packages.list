@@ -17,14 +17,9 @@ inkscape
 intel-ucode
 kate
 kodi-x11
-#linux
 linux-api-headers
 linux-firmware
 linux-headers
-#linux-lts
-#linux-lts-headers
-#linux-zen
-#linux-zen-headers
 lm_sensors
 lynx
 mpg123
