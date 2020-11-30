@@ -16,3 +16,5 @@ echo 'exec startx' > /home/rt/.bash_profile
 
 /etc/systemd/system.conf
 DefaultTimeoutStopSec=10s
+
+https://icon-icons.com/downloadimage.php?id=145482&root=2389/SVG/&file=arch_linux_logo_icon_145482.svg
