@@ -19,3 +19,5 @@ git clone https://gitlab.com/dwt1/wallpapers.git
 DefaultTimeoutStopSec=10s
 
 https://icon-icons.com/downloadimage.php?id=145482&root=2389/SVG/&file=arch_linux_logo_icon_145482.svg
+
+rofi -show -drun > super+r
