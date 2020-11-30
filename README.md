@@ -13,6 +13,7 @@ echo 'exec xfce4-session' > /home/rt/.xinitrc
 # autostart after login:
 echo 'exec startx' > /home/rt/.bash_profile
 
+git clone https://gitlab.com/dwt1/wallpapers.git
 
 /etc/systemd/system.conf
 DefaultTimeoutStopSec=10s
