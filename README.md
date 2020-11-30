@@ -2,6 +2,8 @@
 
 pacman -S - < xfce4-packages.list
 
+usermod -aG wheel rt
+
 https://aur.archlinux.org/brave-bin.git
 
 https://aur.archlinux.org/yay.git
