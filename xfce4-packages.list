@@ -1,8 +1,10 @@
 arc-gtk-theme
+binutils
 cups
 curl
 dhcpcd
 dunst
+fakeroot
 fbset
 feh
 ffmpeg
