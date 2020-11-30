@@ -15,3 +15,4 @@ chown -R rt:rt /home/rt
 passwd rt
 echo 'now set root-password'
 passwd
+systemctl enable dhcpcd
