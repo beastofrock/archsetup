@@ -28,7 +28,6 @@ nano
 nemo
 neofetch
 ntfs-3g
-openbox
 openssh
 pavucontrol
 pulseaudio
@@ -49,6 +48,7 @@ xfce4-session
 xfce4-settings
 xfce4-terminal
 xfce4-whiskermenu-plugin
+xfwm4
 xorg-server
 xterm
 xz
