@@ -39,6 +39,7 @@ pulseaudio
 pulseaudio-alsa
 python
 qterminal
+rofi
 smbclient
 sudo
 tcpdump
