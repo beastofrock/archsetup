@@ -8,6 +8,7 @@ fakeroot
 fbset
 feh
 ffmpeg
+gcc
 git
 gparted
 gvfs-smb
