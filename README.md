@@ -22,13 +22,13 @@ https://icon-icons.com/downloadimage.php?id=145482&root=2389/SVG/&file=arch_linu
 
 rofi -show -drun > super+r
 
-#theme
+# theme
 arc-lighter
 
-#icons
+# icons
 anycolorlikesimple
 
-#fonts
+# fonts
 sourcecode variable light italic 12pt
 
 sourcecode variable light italic 12pt
