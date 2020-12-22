@@ -21,3 +21,14 @@ DefaultTimeoutStopSec=10s
 https://icon-icons.com/downloadimage.php?id=145482&root=2389/SVG/&file=arch_linux_logo_icon_145482.svg
 
 rofi -show -drun > super+r
+
+#theme
+arc-lighter
+
+#icons
+anycolorlikesimple
+
+#fonts
+sourcecode variable light italic 12pt
+
+sourcecode variable light italic 12pt
