@@ -1,0 +1,7 @@
+brave                               Super+W
+i3lock -c 000000                    Super+L
+nemo                                Super+E
+qterminal --geometry 960x530+0+0    Super+T
+rofi -show drun                     Super+R
+
+
