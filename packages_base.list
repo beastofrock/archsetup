@@ -6,10 +6,8 @@ fbset
 ffmpeg
 gcc
 git
-gvfs-smb
 htop
 hwids
-imagemagick
 intel-ucode
 linux-api-headers
 linux-firmware
@@ -23,8 +21,6 @@ nano
 neofetch
 ntfs-3g
 openssh
-pulseaudio
-pulseaudio-alsa
 python
 smbclient
 sudo
