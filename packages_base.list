@@ -3,7 +3,6 @@ curl
 dhcpcd
 fakeroot
 fbset
-ffmpeg
 gcc
 git
 htop
