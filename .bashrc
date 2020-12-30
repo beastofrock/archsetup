@@ -6,5 +6,6 @@ alias sambamount='sh scripts/sambamount.sh'
 alias uncomment='egrep -v "(^#.*|^$)"'
 alias ssho='ssh -oKexAlgorithms=+diffie-hellman-group1-sha1'
 alias getres='sh scripts/getres.sh'
+alias gohome='cd ~ ; pwd'
 update
 clear
