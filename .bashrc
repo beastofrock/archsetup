@@ -7,5 +7,6 @@ alias uncomment='egrep -v "(^#.*|^$)"'
 alias ssho='ssh -oKexAlgorithms=+diffie-hellman-group1-sha1'
 alias getres='sh scripts/getres.sh'
 alias gohome='cd ~ ; pwd'
+alias df='df -h | grep dev/sd'
 update
 clear
