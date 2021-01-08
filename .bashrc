@@ -12,5 +12,8 @@ alias ssho='ssh -oKexAlgorithms=+diffie-hellman-group1-sha1'
 alias getres='sh scripts/getres.sh'
 alias gohome='cd ~ ; pwd'
 alias df='df -h | grep dev/sd'
+alias 1k='xrandr --output DVI-I-1 --scale 1x1 --panning 1920x1080'                                
+alias 4k='xrandr --output DVI-I-1 --scale 1.2x1.2 --panning 2304x1296'
+
 update
 clear
