@@ -15,6 +15,11 @@ alias df1='df -h | grep dev/sd'
 alias du1='du -lah --max-depth=1'
 alias 1k='xrandr --output DVI-I-1 --scale 1x1 --panning 1920x1080'                                
 alias 4k='xrandr --output DVI-I-1 --scale 1.2x1.2 --panning 2304x1296'
+alias getwindows='wmctrl -lG'
+
+googleit() {
+   xdg-open "http://google.com/search?q=$*"
+}
 
 update
 clear
