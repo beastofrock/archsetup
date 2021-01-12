@@ -1,6 +1,6 @@
 arc-gtk-theme
 binutils
-breeze-icons
+#breeze-icons
 cups
 curl
 dhcpcd
@@ -20,7 +20,7 @@ imagemagick
 inkscape
 intel-ucode
 kate
-kodi-x11
+#kodi-x11
 linux-api-headers
 linux-firmware
 linux-headers
