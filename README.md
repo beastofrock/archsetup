@@ -27,6 +27,8 @@ arc-lighter
 
 # icons
 anycolorlikesimple
+--
+yay -S acyls-icon-theme-git
 
 # fonts
 sourcecode variable light italic 12pt
