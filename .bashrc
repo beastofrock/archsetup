@@ -15,6 +15,9 @@ alias du1='du -lah --max-depth=1'
 alias 1k='xrandr --output DVI-I-1 --scale 1x1 --panning 1920x1080'                                
 alias 4k='xrandr --output DVI-I-1 --scale 1.2x1.2 --panning 2304x1296'
 alias getwindows='wmctrl -lG'
+alias qemu-efi='qemu-system-x86_64 -m 4096 -smp 4 --enable-kvm -net nic -net bridge,br=br0 -bios /usr/share/ovmf/x64/OVMF.fd'
+alias qemu-bios='qemu-system-x86_64 -m 4096 smp 4 --enable-kvm -net nic -net bridge,br=br0'
+
 
 googleit() {
    xdg-open "http://google.com/search?q=$*"
