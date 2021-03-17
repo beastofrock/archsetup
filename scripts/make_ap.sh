@@ -22,6 +22,8 @@ brctl addif br0 eth0
 #brctl addif br0 wlan0
 ip link set eth0 up
 ip link set br0 up
+brctl show
+ping google.de -c 1
 #ip add add dev br0 192.168.0.x/24
 #ip route add default via 192.168.0.x
 #echo nameserver 192.168.0.x > /etc/resolv.conf
