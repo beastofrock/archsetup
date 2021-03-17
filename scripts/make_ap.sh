@@ -5,7 +5,7 @@ ip link set wlp4s0 name wlan0
 ip link set wlan0 up
 ###/rename interface
 ip link set enp3s0 down
-ip link set enp3s0 name wlan0
+ip link set enp3s0 name eth0
 ip link set eth0 up
 ###test_wlan
 ###set_ip_address_gateway_etc
