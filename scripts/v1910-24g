@@ -4,5 +4,6 @@ _cmdline-mode on
 512900
 Jinhua1920unauthorized
 
-snmpget -v 1 -c public sw01.home 1.3.6.1.4.1.25506.2.6.1.1.1.1.8.8 | cut -b 57-60
+snmpget -v 1 -c public sw01.home 1.3.6.1.4.1.25506.2.6.1.1.1.1.8.8 | cut -b 57-60                 memory
+                                 1.3.6.1.4.1.25506.2.6.1.1.1.1.12.8                               temp
 
