@@ -4,7 +4,7 @@ nano /etc/locale.gen
 locale-gen
 echo KEYMAP=de-latin1 > /etc/vconsole.conf
 echo FONT=lat9w-16 >> /etc/vconsole.conf
-echo KEYMAP=de-latin1 > /etc/vconsole.conf
+echo KEYMAP=de-latin1 >> /etc/vconsole.conf
 echo FONT=lat9w-16 >> /etc/vconsole.conf
 nano /etc/pacman.conf
 pacman -Sy
