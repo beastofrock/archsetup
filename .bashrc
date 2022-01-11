@@ -21,6 +21,7 @@ alias qemu-bios='qemu-system-x86_64 -m 4096 smp 4 --enable-kvm -net nic -net bri
 alias getyt='cd /home/user/Desktop; pwd; youtube-dl -f "bestvideo[height<=480]+bestaudio/best[height<=480]"'
 alias funcrypt='openssl enc -aes-256-cbc -md sha512 -pbkdf2 -salt -d '
 alias fcrypt='openssl enc -aes-256-cbc -md sha512 -pbkdf2 -salt '
+alias isofolder='mkisofs -lJR -o cdrom.iso'
 
 googleit() {
    xdg-open "http://google.com/search?q=$*"
