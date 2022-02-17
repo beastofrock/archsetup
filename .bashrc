@@ -22,6 +22,7 @@ alias getyt='cd /home/user/Desktop; pwd; youtube-dl -f "bestvideo[height<=480]+b
 alias funcrypt='openssl enc -aes-256-cbc -md sha512 -pbkdf2 -salt -d '
 alias fcrypt='openssl enc -aes-256-cbc -md sha512 -pbkdf2 -salt '
 alias isofolder='mkisofs -lJR -o cdrom.iso'
+alias showfw='iptables -L -n -v ; iptables -t nat -L -n -v'
 
 googleit() {
    xdg-open "http://google.com/search?q=$*"
