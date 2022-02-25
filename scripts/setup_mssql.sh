@@ -1,4 +1,4 @@
-apt install gnupg2 curl htop wget 
+apt install gnupg2 curl htop wget nfs-common
 curl https://packages.microsoft.com/keys/microsoft.asc -o ms.asc
 cat ms.asc 
 apt-key add ms.asc 
