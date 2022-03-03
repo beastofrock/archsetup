@@ -13,3 +13,10 @@ for i in $(cat pl.zone ); do ipset -A poland $i; done
 
 #activate Firewall
 echo 'sudo iptables -A INPUT -p tcp -m set --match-set poland src -j DROP'
+
+echo '
+Allow incoming connections from 192.168.0.1.
+iptables -A INPUT -s 192.168.0.1 -j ACCEPT
+Allow outgoing connections to 192.168.0.1. 
+iptables -A OUTPUT -d 192.168.0.1 -j ACCEPT
+'
