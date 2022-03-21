@@ -1,6 +1,10 @@
 #!/bin/bash
 cat geoip.sh
 
+# maybe install iptables
+# maybe install geoiplookup
+
+
 # download geoip-database....
 # https://mailfud.org/geoip-legacy/GeoIP.dat.gz
 # gunzip GeoIP.dat.gz
