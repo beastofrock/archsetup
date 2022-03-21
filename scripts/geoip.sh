@@ -11,6 +11,6 @@
 #uniq
 #cat ./ip_test.txt | sort | uniq | xargs -n 1 geoiplookup { } 
 
-echo "
+echo '
 sudo journalctl -k | grep "IN=.*OUT=.*" |  grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" | sort | uniq | xargs -n 1 geoiplookup { } | sort | uniq -c | sort -n
-"
+'
