@@ -1,4 +1,6 @@
 #!/bin/bash
+echo 'sudo journalctl -k | grep "IN=.*OUT=.*" for firwewall'
+
 echo "logfile? "
 read logfile
 # download geoip-database....
