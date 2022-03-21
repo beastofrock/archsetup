@@ -10,11 +10,12 @@ rtl_433 -f 868300000 -X n=data,m=FSK_PCM,s=120,l=120,r=2500,match=Bresser-6 -Y c
 #declare function
 f_check () {
 a=$(tail -1 op.csv | cut -d ',' -f 16)
-b=2
+b=17
 echo "$a"
 if (( $(echo "$a > $b" |bc -l) )); then
    curl https://api.telegram.org/botYYYYYYYYYYYYYY:XXXXXXXXXXXXXXXXXXXX/sendMessage -d chat_id=88888888888 -d text="windy!!!! RAFFSTORES UP !!  $a m/s" &> /dev/null
    echo "command for pull up raffstores goes in here"
+   sleep 600
 fi
 echo 'f_check_end'
 }
