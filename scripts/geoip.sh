@@ -14,3 +14,6 @@ grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}"
 
 sort
 uniq
+
+
+cat ./ip_test.txt | sort | uniq | xargs -n 1 geoiplookup { } 
