@@ -28,3 +28,7 @@ while true
 do f_check
 sleep 5
 done
+
+#comments:
+#  curl https://api.telegram.org/botyyyyyyyyyyyyyyyyy:xxxxxxxxxxxxxxxxxxxxx/getupdates | tail -n 1 | cut -d ':' -f 14
+#  for controlling, eg. if text then do sth. ....
