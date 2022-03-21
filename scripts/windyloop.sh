@@ -13,8 +13,8 @@ a=$(tail -1 op.csv | cut -d ',' -f 16)
 b=2
 echo "$a"
 if (( $(echo "$a > $b" |bc -l) )); then
-   curl https://api.telegram.org/botYYYYYYYYYYYYYY:XXXXXXXXXXXXXXXXXXXX/sendMessage -d chat_id=88888888888 -d text="windig!!!! RAFFSTORE HOCH !!  $a m/s" &> /dev/null
-   echo "indeed"
+   curl https://api.telegram.org/botYYYYYYYYYYYYYY:XXXXXXXXXXXXXXXXXXXX/sendMessage -d chat_id=88888888888 -d text="windy!!!! RAFFSTORES UP !!  $a m/s" &> /dev/null
+   echo "command for pull up raffstores goes in here"
 fi
 echo 'f_check_end'
 }
