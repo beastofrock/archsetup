@@ -4,6 +4,9 @@ cat geoip.sh
 # maybe install iptables
 # maybe install geoiplookup
 
+# firewall-logging aktivieren 
+# iptables -A INPUT -j LOG
+# iptables -nvL
 
 # download geoip-database....
 # https://mailfud.org/geoip-legacy/GeoIP.dat.gz
