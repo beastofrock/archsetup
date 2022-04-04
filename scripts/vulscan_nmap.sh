@@ -1,3 +1,5 @@
+
+#!/bin/bash
 cd ~
 mkdir vultemp
 cd vultemp
