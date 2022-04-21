@@ -16,6 +16,6 @@ echo 'tint2 &' >> .config/openbox/autostart
 echo 'pasystray &' >> .config/openbox/autostart
 echo 'xcompmgr &' >> .config/openbox/autostart
 
-ehco 'set linenumbers' >> .nanorc
+echo 'set linenumbers' >> .nanorc
 
 echo 'permit :wheel' > /etc/doas.conf
