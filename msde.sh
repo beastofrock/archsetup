@@ -1,4 +1,4 @@
-pacman -S rofi xorg-server openbox xorg-fonts-misc xorg-xinit tint2 mplayer kate pcmanfm feh breeze-gtk
+pacman -S rofi xorg-server openbox xorg-fonts-misc xorg-xinit tint2 mplayer kate pcmanfm feh breeze-gtk neofetch xcompmgr ranger 
 echo "setxkbmap de" >> .xinitrc
 echo "exec openbox-session" >> .xinitrc
 echo "$HOME/.bashrc" > .bash_profile
