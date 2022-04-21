@@ -1,4 +1,9 @@
-pacman -S rofi xorg-server openbox xorg-fonts-misc xorg-xinit tint2 mplayer kate pcmanfm feh breeze-gtk neofetch xcompmgr ranger pasystray doas
+pacman -S \
+rofi xorg-server openbox xorg-fonts-misc xorg-xinit tint2 mplayer \
+kate pcmanfm feh breeze-gtk neofetch xcompmgr ranger pasystray doas lxapperance \
+w3m highlight atool ueberzug neofetch pulseaudio 
+
+
 
 echo "setxkbmap de" >> .xinitrc
 echo "exec openbox-session" >> .xinitrc
