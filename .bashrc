@@ -23,6 +23,7 @@ alias funcrypt='openssl enc -aes-256-cbc -md sha512 -pbkdf2 -salt -d '
 alias fcrypt='openssl enc -aes-256-cbc -md sha512 -pbkdf2 -salt '
 alias isofolder='mkisofs -lJR -o cdrom.iso'
 alias showfw='iptables -L -n -v ; iptables -t nat -L -n -v'
+alias stripip='grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}"
 
 googleit() {
    xdg-open "http://google.com/search?q=$*"
