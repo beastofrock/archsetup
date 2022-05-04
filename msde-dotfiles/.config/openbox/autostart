@@ -1,4 +1,4 @@
-feh --bg-scale /home/rt/inn.jpg
+feh --bg-scale ~/inn.jpg
 tint2 &
 pasystray &
 xcompmgr &
