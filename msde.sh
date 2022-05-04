@@ -26,3 +26,4 @@ echo 'xcompmgr &' >> .config/openbox/autostart
 echo 'set linenumbers' >> .nanorc
 
 echo 'permit :wheel' > /etc/doas.conf
+timedatectl set-timezone Europe/Berlin
