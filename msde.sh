@@ -1,7 +1,7 @@
 pacman -S \
 rofi xorg-server openbox xorg-fonts-misc xorg-xinit tint2 mplayer \
 kate pcmanfm feh breeze-gtk neofetch xcompmgr ranger pasystray doas lxapperance \
-w3m highlight atool ueberzug neofetch pulseaudio dunst sudo 
+w3m highlight atool ueberzug neofetch pulseaudio dunst sudo git
 
 
 
