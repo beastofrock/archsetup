@@ -14,6 +14,7 @@ echo "startx" >> .bash_profile
 echo 'feh --bg-scale *.jpg' >> .config/openbox/autostart
 echo 'tint2 &' >> .config/openbox/autostart
 echo 'pasystray &' >> .config/openbox/autostart
+echo 'dunst &' >> .config/openbox/autostart
 echo 'xcompmgr &' >> .config/openbox/autostart
 
 echo 'set linenumbers' >> .nanorc
