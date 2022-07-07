@@ -49,4 +49,4 @@ iptables -t nat -A PREROUTING -p tcp --dport 3390 -j LOG --log-prefix "DNAT_haxo
 iptables -t nat -L -v -n
 
 echo "for show logging: dmesg -w "
-
+lsof -i
