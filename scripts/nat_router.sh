@@ -15,4 +15,4 @@ echo "1" > /proc/sys/net/ipv4/ip_forward
 iptables -t nat -A POSTROUTING -o $wanif -j MASQUERADE
 iptables -t nat -L -v -n
 echo ""
-lsof -i
+lsof -i -n -S -Pi
