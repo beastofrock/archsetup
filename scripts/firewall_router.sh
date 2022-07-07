@@ -1,4 +1,11 @@
 #!/bin/bash
+echo "reset all...."
+
+iptables -X
+iptables -F
+iptables -t nat -F
+
+sleep 4
 echo "install iptables, dnsmasq"
 echo "dnsmasq working?"
 
@@ -25,8 +32,21 @@ echo "lanip: $lanip1"
 echo "wanip: $wanip"
 
 
-iptables -t nat -A PREROUTING -p tcp --dport 80 -j LOG --log-prefix "DNAT_80: "
+echo "for logging first log-rule then the dnat"
+iptables -t nat -A PREROUTING -p tcp --dport 80 -j LOG --log-prefix "DNAT_http_80: "
 iptables -t nat -A PREROUTING -p tcp -d $wanip --dport 80 -j DNAT --to-destination $lanip1
+
+echo "no logging for ssh-port 10022"
 iptables -t nat -A PREROUTING -p tcp -d $wanip --dport 10022 -j DNAT --to-destination $lanip1
 
+iptables -t nat -A PREROUTING -p tcp --dport 3389 -j LOG --log-prefix "DNAT_rdp_3389: "
+iptables -t nat -A PREROUTING -p tcp -d $wanip --dport 3389 -j DNAT --to-destination $lanip1
+
+echo "log-port with no dnat"
+iptables -t nat -A PREROUTING -p tcp --dport 3390 -j LOG --log-prefix "DNAT_haxor_3390: "
+
+
 iptables -t nat -L -v -n
+
+echo "for show logging: dmesg -w "
+
