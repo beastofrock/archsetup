@@ -46,4 +46,4 @@ echo ""
 echo "for show logging: dmesg -w "
 echo ""
 echo ""
-lsof -i
+lsof -i -n -S -Pi
