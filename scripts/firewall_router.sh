@@ -1,9 +1,11 @@
 #!/bin/bash
+clear
 echo "reset all...."
 iptables -X
 iptables -F
 iptables -t nat -F
 sleep 4
+clear
 echo "install iptables, dnsmasq"
 echo "dnsmasq working?"
 wanif=enp1s0
