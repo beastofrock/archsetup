@@ -1,0 +1,78 @@
+create-lxc.sh :
+
+#!/bin/bash
+clear
+echo '#################################'
+echo '                                 '
+echo 'machine-name? (.home added auto )'
+echo ''
+read name
+echo '#################################'
+echo '                                 '
+echo 'machine-name will be: '
+echo $name.home
+echo '#################################'
+echo '                                 '
+read -p 'OK? any key!!!! or CTRL+C for abort'
+echo '#################################'
+echo '                                 '
+lxc-create -n $name.home -t download -- --dist archlinux --release current --arch amd64
+echo '#################################'
+echo '                                 '
+lxc-ls -f
+cp /data/scripts/basic-conf.sh /data/lxc/$name.home/rootfs/root/
+cp /etc/pacman.d/mirrorlist /data/lxc/$name.home/rootfs/etc/pacman.d/
+echo '#################################'
+echo '                                 '
+echo 'start machine?'
+echo 'ctrl+a+q to quit out'
+read -p 'OK? any key!!!! or CTRL+C for abort'
+echo '#################################'
+echo '                                 '
+lxc-start $name.home
+lxc-attach -n $name.home
+echo ''
+echo ''
+echo 'machine is ready to use'
+echo ''
+lxc-ls -f
+echo '#################################'
+echo ''
+echo 'starting machine .......'
+echo ''
+echo '#################################'
+lxc-start $name.home
+ping localhost -c 3 | grep bx
+lxc-ls -f
+
+
+
+
+
+basic.conf.sh:
+#!/bin/bash
+echo '#################################'
+echo '                                 '
+echo "passwd for root"
+passwd
+useradd rt
+echo '#################################'
+echo '                                 '
+echo "passwd for rt"
+passwd rt
+mkdir -p /home/rt
+chown rt:rt /home/rt
+nano /etc/locale.gen
+locale-gen
+nano /etc/hostname
+echo KEYMAP=de-latin1 > /etc/vconsole.conf
+echo FONT=lat9w-16 >> /etc/vconsole.conf
+ln -sf /usr/share/zoneinfo/Europe/Berlin /etc/localtime
+pacman -Sy
+pacman -S reflector
+reflector --verbose -l 20 -p http --sort rate --save /etc/pacman.d/mirrorlist
+pacman -Sy
+pacman -S sudo openssh
+systemctl enable sshd
+systemctl start sshd
+nano /etc/sudoers
