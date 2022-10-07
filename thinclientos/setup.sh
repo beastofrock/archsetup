@@ -13,9 +13,13 @@ echo ' [[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx ' >> ~/.bash_profile
 cat ~/.bash_profile
 
 
-mkdir -p ~/.config/openbox
-echo 'wget http://ts01/verbindung.txt -E 
-echo 'remmina &' > ~/.config/openbox/autostart
+echo '
+wget -N -O /home/rt/.local/share/remmina/group_rdp_terminalserver_ts01.remmina http://ts01/ts01.txt  
+remmina &
+feh --bg-max wallpaper.png' > ~/.config/openbox/autostart
 chmod +x ~/.config/openbox/autostart
 
 
+wget -N -O /home/rt/.local/share/remmina/group_rdp_terminalserver_ts01.remmina http://ts01/ts01.txt  
+remmina &
+feh --bg-max wallpaper.png
