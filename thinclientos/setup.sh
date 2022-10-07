@@ -17,7 +17,7 @@ mkdir ~/.config/openbox
 touch ~/.config/openbox/autostart
 chmod +x ~/.config/openbox/autostart
 echo '
-wget -N -O /home/rt/.local/share/remmina/group_rdp_terminalserver_ts01.remmina https://github.com/beastofrock/archsetup/blob/main/thinclientos/ts01.txt
+wget -N -O /home/rt/.local/share/remmina/group_rdp_terminalserver_ts01.remmina https://raw.githubusercontent.com/beastofrock/archsetup/main/thinclientos/ts01.txt
 remmina &
 feh --bg-max wallpaper.png' > ~/.config/openbox/autostart
 chmod +x ~/.config/openbox/autostart
