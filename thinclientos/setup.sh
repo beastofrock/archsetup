@@ -1,6 +1,6 @@
 apt update
 apt upgrade -y
-apt install xinit openbox rdesktop remmina git xterm wget feh -y
+apt install xinit openbox rdesktop remmina git xterm wget feh freerdp2-x11 -y
 
 mkdir -pv /etc/systemd/system/getty@tty1.service.d/
 echo '[Service]
