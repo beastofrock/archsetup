@@ -1,5 +1,5 @@
 apt update
-apt install xinit openbox rdesktop remmina git xterm wget -y
+apt install xinit openbox rdesktop remmina git xterm wget feh -y
 
 
 mkdir -pv /etc/systemd/system/getty@tty1.service.d/
