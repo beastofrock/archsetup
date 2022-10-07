@@ -19,7 +19,3 @@ remmina &
 feh --bg-max wallpaper.png' > ~/.config/openbox/autostart
 chmod +x ~/.config/openbox/autostart
 
-
-wget -N -O /home/rt/.local/share/remmina/group_rdp_terminalserver_ts01.remmina http://ts01/ts01.txt  
-remmina &
-feh --bg-max wallpaper.png
