@@ -19,7 +19,7 @@ chown rt:rt -R /home/rt/.config/openbox
 echo '
 wget -N -O /home/rt/.local/share/remmina/group_rdp_terminalserver_ts01.remmina https://raw.githubusercontent.com/beastofrock/archsetup/main/thinclientos/ts01.txt
 remmina &
-feh --bg-max wallpaper.png' > ~/.config/openbox/autostart
+feh --bg-max wallpaper.png' > /home/rt/.config/openbox/autostart
 
 /sbin/reboot
 
