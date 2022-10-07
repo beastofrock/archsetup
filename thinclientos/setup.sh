@@ -15,11 +15,13 @@ cat /home/rt/.bash_profile
 mkdir -p /home/rt/.config/openbox
 touch /home/rt/.config/openbox/autostart
 chmod +x /home/rt/.config/openbox/autostart
-chown rt:rt -R /home/rt/.config/openbox
+
 echo '
 wget -N -O /home/rt/.local/share/remmina/group_rdp_terminalserver_ts01.remmina https://raw.githubusercontent.com/beastofrock/archsetup/main/thinclientos/ts01.txt
 remmina &
 feh --bg-max wallpaper.png' > /home/rt/.config/openbox/autostart
+
+chown -R rt:rt /home/rt/
 
 /sbin/reboot
 
