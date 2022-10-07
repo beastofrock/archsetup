@@ -13,7 +13,9 @@ systemctl status getty@tty1.service
 echo ' [[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx ' >> ~/.bash_profile
 cat ~/.bash_profile
 
-
+mkdir ~/.config/openbox
+touch ~/.config/openbox/autostart
+chmod +x ~/.config/openbox/autostart
 echo '
 wget -N -O /home/rt/.local/share/remmina/group_rdp_terminalserver_ts01.remmina https://github.com/beastofrock/archsetup/blob/main/thinclientos/ts01.txt
 remmina &
