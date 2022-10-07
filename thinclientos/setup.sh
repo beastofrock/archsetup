@@ -12,7 +12,7 @@ systemctl enable getty@tty1.service
 echo ' [[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx ' > /home/rt/.bash_profile
 cat /home/rt/.bash_profile
 
-mkdir /home/rt/.config/openbox
+mkdir -p /home/rt/.config/openbox
 touch /home/rt/.config/openbox/autostart
 chmod +x /home/rt/.config/openbox/autostart
 chown rt:rt -R /home/rt/.config/openbox
