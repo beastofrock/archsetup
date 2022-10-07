@@ -8,7 +8,6 @@ echo '[Service]
 ExecStart=
 ExecStart=-/sbin/agetty --autologin rt --noclear tty1 38400' > /etc/systemd/system/getty@tty1.service.d/autologin.conf
 systemctl enable getty@tty1.service
-#systemctl status getty@tty1.service
 
 echo ' [[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx ' > /home/rt/.bash_profile
 cat /home/rt/.bash_profile
@@ -27,7 +26,4 @@ chown -R rt:rt /home/rt/
 sed -i 's/GRUB_TIMEOUT=5/GRUB_TIMEOUT=0/g' /etc/default/grub
 /sbin/grub-mkconfig -o /boot/grub/grub.cfg
 
-
-
 /sbin/reboot
-
