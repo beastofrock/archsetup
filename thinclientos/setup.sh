@@ -1,4 +1,5 @@
 apt update
+apt upgrade -y
 apt install xinit openbox rdesktop remmina git xterm wget feh -y
 
 
