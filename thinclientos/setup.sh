@@ -1,3 +1,4 @@
+sed -i 's/stretch/bullseye/g' /etc/apt/sources.list
 apt update
 apt upgrade -y
 apt install xinit openbox rdesktop remmina git xterm wget feh freerdp2-x11 -y
@@ -25,6 +26,8 @@ chown -R rt:rt /home/rt/
 
 sed -i 's/GRUB_TIMEOUT=5/GRUB_TIMEOUT=0/g' /etc/default/grub
 /sbin/grub-mkconfig -o /boot/grub/grub.cfg
+
+
 
 /sbin/reboot
 
