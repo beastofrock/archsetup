@@ -1,0 +1,134 @@
+server {
+    set $hdbackend "http://192.168.1.200";
+    listen 443 ssl;
+    server_name helpdesk.domain.de;
+    root /var/www/html/helpdesk;
+    index index.html;
+
+    ssl_certificate /srv/pub.crt;
+    ssl_certificate_key /srv/priv.key;
+
+    ssl_verify_client optional;
+    ssl_client_certificate /srv/ca.crt;
+
+    location / {
+        alias /var/www/html/helpdesk/;
+        index index.html;
+
+        if ($ssl_client_verify != SUCCESS) {
+            return 403;
+        }
+
+    }
+}
+
+
+server {
+    set $mxbackend "https://192.168.1.201";
+    listen 443 ssl;
+    server_name mail.domain.de autodiscover.domain.de mx01.domain.de remote.domain.de;
+
+    root /var/www/html;
+    index index.html;
+
+    ssl_certificate /srv/pub.crt;
+    ssl_certificate_key /srv/priv.key;
+
+    ssl_verify_client optional;
+    ssl_client_certificate /srv/ca.crt;
+
+    location / {
+        proxy_pass $mxbackend;
+        proxy_set_header Host $host;
+        proxy_set_header X-Forwarded-For $remote_addr;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        client_max_body_size 50M;
+        access_log /srv/access_owa.log;
+        error_log /srv/error_owa.log;
+        proxy_buffer_size 512k;
+        proxy_buffers 4 256k;
+        proxy_busy_buffers_size 512k;
+        proxy_read_timeout 3600;
+
+
+    }
+
+    location /owa {
+        proxy_pass $mxbackend;
+        proxy_set_header Host $host;
+        proxy_set_header X-Forwarded-For $remote_addr;
+        proxy_set_header X-Forwarded-Proto $scheme;
+
+        if ($ssl_client_verify != SUCCESS) {
+            return 403;
+        }
+    }
+
+    location /ecp {
+        alias /var/www/html/insec/;
+        index index.html;
+    }
+
+    location /Microsoft-Server-ActiveSync {
+        alias /var/www/html/insec/;
+        index index.html;
+    }
+
+    location /OAB {
+        alias /var/www/html/insec/;
+        index index.html;
+    }
+
+    location /oab {
+        alias /var/www/html/insec/;
+        index index.html;
+    }
+
+    location /EWS {
+        proxy_pass $mxbackend;
+        proxy_set_header Host $host;
+        proxy_set_header X-Forwarded-For $remote_addr;
+        proxy_set_header X-Forwarded-Proto $scheme;
+
+        if ($ssl_client_verify != SUCCESS) {
+            return 403;
+        }
+
+    }
+
+    location /ews {
+        proxy_pass $mxbackend;
+        proxy_set_header Host $host;
+        proxy_set_header X-Forwarded-For $remote_addr;
+        proxy_set_header X-Forwarded-Proto $scheme;
+
+        if ($ssl_client_verify != SUCCESS) {
+            return 403;
+        }
+
+    }
+
+
+    location /powershell {
+        alias /var/www/html/insec/;
+        index index.html;
+    }
+
+    location /mapi {
+        alias /var/www/html/insec/;
+        index index.html;
+    }
+
+}
+
+
+
+#Autodiscover
+#ecp
+#EWS
+#mapi
+#Microsoft-Server-ActiveSync
+#OAB
+#owa
+#powershell
