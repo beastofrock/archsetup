@@ -22,7 +22,6 @@ server {
     }
 }
 
-
 server {
     set $mxbackend "https://192.168.1.201";
     listen 443 ssl;
@@ -50,7 +49,6 @@ server {
         proxy_buffers 4 256k;
         proxy_busy_buffers_size 512k;
         proxy_read_timeout 3600;
-
 
     }
 
@@ -109,7 +107,6 @@ server {
 
     }
 
-
     location /powershell {
         alias /var/www/html/insec/;
         index index.html;
@@ -121,8 +118,6 @@ server {
     }
 
 }
-
-
 
 #Autodiscover
 #ecp
