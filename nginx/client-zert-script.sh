@@ -57,3 +57,6 @@ openssl verify -CAfile ca.crt client.crt
 
 echo "ssl_client_certificate /srv/cl/ca.crt;"
 echo "ssl_verify_client on;"
+
+echo $CLIENT_PASSWORD > passcode
+ls
