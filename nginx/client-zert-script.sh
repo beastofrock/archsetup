@@ -10,8 +10,10 @@ CLIENT_P12="client.p12"
 DAYS_VALID=365
 
 # Set client details
-CLIENT_COMMON_NAME="mail.domain.com"
-CLIENT_PASSWORD="MyPassword"
+#CLIENT_COMMON_NAME="mail.domain.com"
+read -p "enter hostname: " CLIENT_COMMON_NAME
+#CLIENT_PASSWORD="MyPassword"
+read -p "enter password for clientzert: " CLIENT_PASSWORD
 
 echo "🔹 Creating a new Certificate Authority (CA)..."
 
