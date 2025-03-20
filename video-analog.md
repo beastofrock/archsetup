@@ -1,5 +1,6 @@
-Analog TV Standards
+#Analog TV Standards
 Standard	        Resolution (lines × dots)	DAR (H:V)	Pixels
+
 
 PAL, SECAM        576 × ~520	4:3	~299,520
 PALplus           576 × ~520	16:9	~300,000
