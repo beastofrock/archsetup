@@ -1,4 +1,4 @@
-#Analog TV Standards
+Analog TV Standards
 Standard	        Resolution (lines × dots)	DAR (H:V)	Pixels
 
 
