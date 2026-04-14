@@ -1,0 +1,29 @@
+echo "wget https://buildroot.org/downloads/buildroot-2026.02.tar.gz"
+cd buildroot-2026.02
+make menuconfig
+make
+ls output/images/
+cd output/images
+cp bzImage rootfs.tar /home/rt/buildroot/
+cd /home/rt/buildroot/
+rm -rf distro
+mkdir distro
+mv bzImage rootfs.tar distro/
+cd distro/
+tar xf rootfs.tar 
+rm rootfs.tar 
+cd /home/rt/buildroot
+truncate  -s 250MB boot.img
+mkfs boot.img 
+sudo mount boot.img mountie/
+ls mountie/
+sudo extlinux --install mountie/
+sudo cp -r distro/* mountie/
+sudo cp /home/rt/Schreibtisch/binary mountie/root/
+sudo cp /home/rt/buildroot/syslinux.cfg mountie/syslinux.cfg
+sudo cp /home/rt/buildroot/kiosk.sh mountie/root/
+ls mountie
+sudo umount mountie/
+clear
+echo /bzImage root=/dev/sda
+qemu-system-x86_64 -hda boot.img -vga std -display sdl
