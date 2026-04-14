@@ -1,4 +1,6 @@
 echo "wget https://buildroot.org/downloads/buildroot-2026.02.tar.gz"
+echo "install extlinux truncate make gcc g++"
+
 cd buildroot-2026.02
 make menuconfig
 make
