@@ -1,0 +1,13 @@
+# Google Ads blocking
+127.0.0.1 ads.google.com
+127.0.0.1 pagead2.googlesyndication.com
+127.0.0.1 googleads.g.doubleclick.net
+127.0.0.1 adservice.google.com
+127.0.0.1 www.googleadservices.com
+127.0.0.1 partner.googleadservices.com
+127.0.0.1 googleads.g.doubleclick.net
+127.0.0.1 pagead2.googlesyndication.com
+127.0.0.1 www.googleadservices.com
+127.0.0.1 adservice.google.com
+127.0.0.1 youtubeads.com
+127.0.0.1 ads.youtube.com
